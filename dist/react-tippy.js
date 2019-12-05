@@ -2413,7 +2413,7 @@ var Tippy = function () {
         return;
       }
 
-      content.innerHTML = html ? document.getElementById(html.replace('#', '')).innerHTML : el.getAttribute('title') || el.getAttribute('data-original-title');
+      content.innerHTML = html && document.getElementById(html.replace('#', '')) ? document.getElementById(html.replace('#', '')).innerHTML : el.getAttribute('title') || el.getAttribute('data-original-title');
 
       if (!html) (0, _removeTitle2.default)(el);
     }
